@@ -1,6 +1,5 @@
 {
-	"name":"logins",
-	"filme":[
+	"logins":[
 		{
 			"username":"admin",
 			"passwort":"passwort"

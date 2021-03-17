@@ -1,9 +1,13 @@
+console.log('zdarova');
+
 const userInput = document.querySelector('#username');
-const passInput = document.querySelector('#passwort');
+const passInput = document.querySelector('#password');
 const regBttn = document.querySelector('#registration');
 
 
-regBttn.addEventListener('click', function () {
+regBttn.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     fetch("http://localhost:8080/registration", {
         method: "put",
         body: JSON.stringify({
