@@ -1,97 +1,43 @@
-:root {
-    box-sizing: border-box;
-  }
+body {
+  margin-top: 5%;
+  margin-left: 20%;
+}
 
-  *,
-  ::before,
-  ::after {
-    box-sizing: inherit;
-  }
+p, h1 {
+  padding-left: 10px;
+}
 
-  body {
-    background-color: #709b90;
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 5% 10%
-  }
+input {
+  width: 100%;
+}
 
-  .container {
-    display: grid;
-    grid-template-areas: "title title"
-                         "aside1  main"
-                         "aside2  main"
-                         "footer footer";
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(4, auto);
-    grid-gap: 10px;
-    max-width: 1080px;
-    margin: 0 auto;
-  }
+.container {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "aside1 main"
+    "footer footer";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 10px;
+}
 
-  header {
-    grid-area: title;
-    background: #fff;
-  }
-  
-  footer {
-    grid-area: footer;
-    background: #fff;
-  }
+header {
+  grid-area: title;
+  background: #4291ff;
+}
 
-  .main {
-    grid-area: main;
-  }
+footer {
+  grid-area: footer;
+  background: #4291ff;
+  text-align: right;
+  padding: 10px;
+}
 
-  .sidebar-top {
-    grid-area: aside1;
-  }
+.main {
+  grid-area: main;
+}
 
-  .sidebar-bottom {
-    grid-area: aside2;
-  }
-
-  .tile {
-    padding: 1.5em;
-    background-color: #fff;
-  }
-
-  .tile > :first-child {
-    margin-top: 0;
-  }
-
-  .tile * + * {
-    margin-top: 1.5em;
-  }
-
-  .page-heading {
-    margin: 0;
-  }
-  
-  .page-footer {
-    margin: 0;
-  }
-
-  .login-form h3 {
-    margin: 0;
-    font-size: .9em;
-    font-weight: bold;
-    text-align: right;
-    text-transform: uppercase;
-  }
-
-  .login-form input:not([type=checkbox]):not([type=radio]) {
-    display: block;
-    margin-top: 0;
-    width: 100%;
-  }
-
-  .login-form button {
-    margin-top: 1em;
-    border: 1px solid #cc6b5a;
-    background-color: white;
-    padding: .5em 1em;
-    cursor: pointer;
-  }
-
-  .centered {
-    text-align: center;
-  }
+.sidebar-top {
+  grid-area: aside1;
+}

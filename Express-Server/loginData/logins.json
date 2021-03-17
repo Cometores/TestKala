@@ -1,8 +1,24 @@
 {
-	"logins":[
-		{
-			"username":"admin",
-			"passwort":"passwort"
-		}
-	]
+	"logins": [{
+		"username": "admin",
+		"passwort": "passwort"
+	}, {
+		"username": "user666",
+		"passwort": "666"
+	}, {
+		"username": "123123",
+		"passwort": "134134"
+	}, {
+		"username": "2542",
+		"passwort": "254325"
+	}, {
+		"username": "1",
+		"passwort": "1"
+	}, {
+		"username": "3",
+		"passwort": "3"
+	}, {
+		"username": "admin",
+		"passwort": "adfa"
+	}]
 }
