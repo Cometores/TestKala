@@ -14,8 +14,8 @@ app.put('/registration', (req, res) => {
     var newReg = req.body;
     var logins = JSON.parse(fs.readFileSync('./loginData/logins.json', 'utf8'));
 
-    console.log(newReg.password)
-    console.log(newReg.username)
+    // console.log(newReg.password)
+    // console.log(newReg.username)
 
     //Проверка на символы
     if (newReg.username.length < 5 && newReg.password.length < 3) {
@@ -58,9 +58,12 @@ app.put('/login', (req, res) => {
     var userLogin = req.body;
     var logins = JSON.parse(fs.readFileSync('./loginData/logins.json', 'utf8'));
 
+    console.log('1')
+    console.log(userLogin.password)
+    console.log(userLogin.username)
 
     //Проверка на правильность заполнения формы
-    if (userLogin.password.len == 0 || userLogin.username.len == 0)
+    if (userLogin.password.length == 0 || userLogin.username.length == 0)
     {
         res.status(505)
             res.send({"success": "false", "errorMsg": "input invalid"});
