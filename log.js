@@ -17,5 +17,9 @@ regBttn.addEventListener('click', function (e) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
+    }).then((res) => {
+        if (res.status == 505) {
+            alert("Ungültige Daten");
+        }
     })
 })
