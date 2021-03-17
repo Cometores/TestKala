@@ -56,6 +56,8 @@ app.put('/login', (req, res) => {
     var userLogin = req.body;
     var logins = JSON.parse(fs.readFileSync('./loginData/logins.json', 'utf8'));
 
+
+
     //Проверка на правильность заполнения формы
     if (userLogin.password.len == 0 || userLogin.username.len == 0)
     {
@@ -63,6 +65,8 @@ app.put('/login', (req, res) => {
             res.send({"success": "false", "errorMsg": "input invalid"});
             return;
     }
+
+
 
     //Логин в систему
     for (user in logins.logins) {
@@ -72,22 +76,12 @@ app.put('/login', (req, res) => {
         }
     }
 
+
     //Логин АДМИНОМ
     if (userLogin.username == "admin" && userLogin.password == "password")
     {
 
     }
-
-
-
-
-
-    logins.logins.push(newReg);
-    logins = JSON.stringify(logins);
-
-    fs.writeFileSync('./loginData/logins.json', logins);
-    console.log(logins);
-    res.status(201);
 });
 
 
