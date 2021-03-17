@@ -14,9 +14,11 @@ app.put('/registration', (req, res) => {
     var newReg = req.body;
     var logins = JSON.parse(fs.readFileSync('./loginData/logins.json', 'utf8'));
 
+    console.log(newReg.password)
+    console.log(newReg.username)
 
     //Проверка на символы
-    if (newReg.username.length < 5 || newReg.password.length < 3) {
+    if (newReg.username.length < 5 && newReg.password.length < 3) {
         res.status(501)
         res.send({"success": "false", "errorMsg": "Too short user and pass!"});
         return;
@@ -55,7 +57,6 @@ app.put('/registration', (req, res) => {
 app.put('/login', (req, res) => {
     var userLogin = req.body;
     var logins = JSON.parse(fs.readFileSync('./loginData/logins.json', 'utf8'));
-
 
 
     //Проверка на правильность заполнения формы
