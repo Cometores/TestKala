@@ -1,5 +1,3 @@
-console.log('zdarova');
-
 const userInput = document.querySelector('#username');
 const passInput = document.querySelector('#password');
 const regBttn = document.querySelector('#registration');
@@ -31,6 +29,12 @@ regBttn.addEventListener('click', function (e) {
         }
         else if (res.status == 504) {
             alert("User schon bereits existiert");
+        }
+        else if (res.status == 505) {
+            alert("Ungültige Daten");
+        }
+        else if (res.status == 201) {
+            alert("Registrierung erfolgreich!");
         }
     })
 });

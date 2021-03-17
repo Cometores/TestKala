@@ -7,8 +7,9 @@ p, h1 {
   padding-left: 10px;
 }
 
-input {
-  width: 100%;
+button {
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -24,14 +25,14 @@ input {
 
 header {
   grid-area: title;
-  background: #4291ff;
+  background: #a2d1df;
 }
 
 footer {
   grid-area: footer;
-  background: #4291ff;
+  background: #a2d1df;
   text-align: right;
-  padding: 10px;
+  padding-right: 10px;
 }
 
 .main {
@@ -40,4 +41,5 @@ footer {
 
 .sidebar-top {
   grid-area: aside1;
+  background: #a2d1df;
 }

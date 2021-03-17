@@ -1,7 +1,7 @@
 {
 	"logins": [{
 		"username": "admin",
-		"passwort": "passwort"
+		"passwort": "password"
 	}, {
 		"username": "user666",
 		"passwort": "666"
