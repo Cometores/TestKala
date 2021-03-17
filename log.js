@@ -11,7 +11,7 @@ regBttn.addEventListener('click', function (e) {
         method: "put",
         body: JSON.stringify({
             username: userInput.value,
-            passwort: passInput.value,
+            password: passInput.value,
         }),
         headers: {
             'Accept': 'application/json',

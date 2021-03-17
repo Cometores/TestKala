@@ -1,17 +1,17 @@
-const userInput = document.querySelector('#username');
-const passInput = document.querySelector('#password');
-const regBttn = document.querySelector('#registration');
+const userInp = document.querySelector('#username');
+const passInp = document.querySelector('#password');
+const regBtn = document.querySelector('#registration');
 
 
-regBttn.addEventListener('click', function (e) {
+regBtn.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
     console.log("zopa");
     fetch("http://localhost:8080/registration", {
         method: "put",
         body: JSON.stringify({
-            username: userInput.value,
-            passwort: passInput.value,
+            username: userInp.value,
+            password: passInp.value,
         }),
         headers: {
             'Accept': 'application/json',
