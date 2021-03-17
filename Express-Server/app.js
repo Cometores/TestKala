@@ -90,6 +90,13 @@ app.put('/login', (req, res) => {
 
 
 
+//Article
+app.get('/', (req, res) => {
+    console.log('PIDOR');
+    var articles = JSON.parse(fs.readFileSync('./article/article.json', 'utf8'));
+    res.status(200);
+});
+
 
 app.listen(8080, () => {
     console.log("Server running on port 8080");
